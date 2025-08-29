@@ -17,10 +17,9 @@ class Cars():
         self.cars.append(car)
 
     def move_car(self):
-        for car in self.cars:
-            car.forward(self.speed)
-
+        
         for car in self.cars[:]:
+            car.forward(self.speed)
             if car.xcor() < -400:
                 car.hideturtle()
                 self.cars.remove(car)
